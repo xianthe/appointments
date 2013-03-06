@@ -33,7 +33,7 @@ class AppointmentsController < ApplicationController
 
   private
 
-  def load_todo
+  def load_appointment
     @appointment = Appointment.find params[:id]
   end
 end
