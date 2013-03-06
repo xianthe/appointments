@@ -1,0 +1,11 @@
+
+gem install rails
+bundle install
+
+rake db:setup (runs create, migrate, seed)
+rake db:create | rake db:migrate (if needed)
+db:seed
+rake db:drop (to destroy
+
+rails s to run the application
+
