@@ -10,21 +10,18 @@ window.AppointmentsView = Backbone.View.extend({
     return this;
   },
 
-  // testOne: function(appointmentItem){
-  //   console.log("Testing");
-  // },
-
   addAll: function(){
     console.log("Calling add all");
     this.$el.empty();
     var size_coll = this.collection.size();
     console.log("sizeof collection: " + size_coll);
     this.collection.forEach(this.addOne, this);
-    // this.collection.forEach(this.testOne, this);
   },
 
   addOne: function(appointmentItem){
     var appointmentView = new AppointmentView({model: appointmentItem});
     this.$el.append(appointmentView.render().el);
+    console.log("Rendering from addOne: ");
+    console.log(appointmentView.render().el);
   }
 });

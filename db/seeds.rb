@@ -16,3 +16,13 @@ Appointment.find_or_initialize_by_description("Regular checkup").tap do |appt|
   appt.status = 'complete'
   appt.save!
 end
+
+Appointment.find_or_initialize_by_description("Tax specialist").tap do |appt|
+  appt.status = 'incomplete'
+  appt.save!
+end
+
+Appointment.find_or_initialize_by_description("Kitty is sick").tap do |appt|
+  appt.status = 'complete'
+  appt.save!
+end
